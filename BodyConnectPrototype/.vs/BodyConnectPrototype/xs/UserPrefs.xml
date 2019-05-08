@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{EE26FBF3-B61F-5746-83E6-8628925762D7}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SessionManager.cs">
+    <Files>
+      <File FileName="Assets/GroupManager.cs" Line="26" Column="76" />
+      <File FileName="Assets/Group.cs" Line="10" Column="36" />
+      <File FileName="Assets/GroupButton.cs" Line="18" Column="9" />
+      <File FileName="Assets/PageManager.cs" Line="20" Column="55" />
+      <File FileName="Assets/Session.cs" Line="12" Column="24" />
+      <File FileName="Assets/SessionManager.cs" Line="31" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
