@@ -6,6 +6,12 @@ public class PageManager : MonoBehaviour
 {
     public Transform[] panels;
     public TopBar topBar;
+    public GameObject menuPanel;
+
+    [Header("Animator References")]
+    public Animator menuAnimator;
+    public List<Animator> pageAnimators;
+
     private List<int> pageStack = new List<int>();
 
     public void Start()
@@ -14,6 +20,7 @@ public class PageManager : MonoBehaviour
         {
             panels[i].gameObject.SetActive(true);
         }
+
         ChangePage(2);
     }
 
@@ -24,6 +31,11 @@ public class PageManager : MonoBehaviour
             ChangePage(pageStack[pageStack.Count - 2], false);
             pageStack.RemoveAt(pageStack.Count - 1);
         }
+    }
+
+    public void ShowMenu(bool show)
+    {
+        menuAnimator.SetBool("Show", show);
     }
 
     public void ChangePage(int number, bool isForward = true)
@@ -38,31 +50,26 @@ public class PageManager : MonoBehaviour
             topBar.SetHeaderText("Groups");
         }
 
-        for (int i = 0; i < panels.Length; i++)
-        {
-            if (i == number)
-            {
-                panels[i].gameObject.transform.position = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
-            }
-            else
-            {
-                panels[i].gameObject.transform.position = new Vector3(10000, 0, 0);
-            }
-        }
+        AnimatePages(number);
     }
     public void ChangePage(int number)
     {
         pageStack.Add(number);
 
-        for (int i = 0; i < panels.Length; i++)
+        AnimatePages(number);
+    }
+
+    private void AnimatePages(int number)
+    {
+        for (int i = 0; i < pageAnimators.Count; i++)
         {
             if (i == number)
             {
-                panels[i].gameObject.transform.position = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
+                pageAnimators[i].SetBool("Show", true);
             }
             else
             {
-                panels[i].gameObject.transform.position = new Vector3(10000, 0, 0);
+                pageAnimators[i].SetBool("Show", false);
             }
         }
     }

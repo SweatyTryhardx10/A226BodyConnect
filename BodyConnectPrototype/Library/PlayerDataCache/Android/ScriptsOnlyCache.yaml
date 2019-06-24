@@ -5,9 +5,18 @@ ScriptsOnlyBuild:
     - GroupButton
     - GroupManager
     - NewGroupManager
+    - NewSessionManager
     - PageManager
     - SessionManager
+    - ShiftColourButton
+    - SliderText
     - TopBar
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -16,8 +25,11 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.Shadow
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
@@ -34,42 +46,60 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9320}
+      Script: {instanceID: 9324}
     - Class: 114
-      Script: {instanceID: 9322}
+      Script: {instanceID: 9326}
     - Class: 114
-      Script: {instanceID: 9328}
+      Script: {instanceID: 9332}
     - Class: 114
-      Script: {instanceID: 9334}
+      Script: {instanceID: 9338}
     - Class: 114
-      Script: {instanceID: 9342}
+      Script: {instanceID: 9340}
     - Class: 114
-      Script: {instanceID: 9344}
+      Script: {instanceID: 9346}
+    - Class: 114
+      Script: {instanceID: 9348}
     - Class: 114
       Script: {instanceID: 9378}
     - Class: 114
       Script: {instanceID: 9380}
     - Class: 114
-      Script: {instanceID: 9390}
+      Script: {instanceID: 9382}
     - Class: 114
-      Script: {instanceID: 9546}
+      Script: {instanceID: 9384}
     - Class: 114
-      Script: {instanceID: 9730}
+      Script: {instanceID: 9394}
     - Class: 114
-      Script: {instanceID: 9734}
+      Script: {instanceID: 9524}
     - Class: 114
-      Script: {instanceID: 9974}
+      Script: {instanceID: 9552}
     - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 9736}
     - Class: 114
-      Script: {instanceID: 10448}
+      Script: {instanceID: 9740}
     - Class: 114
-      Script: {instanceID: 10516}
+      Script: {instanceID: 9986}
+    - Class: 114
+      Script: {instanceID: 10214}
+    - Class: 114
+      Script: {instanceID: 10222}
+    - Class: 114
+      Script: {instanceID: 10450}
+    - Class: 114
+      Script: {instanceID: 10468}
+    - Class: 114
+      Script: {instanceID: 10536}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -513,6 +543,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 57d65f8e424c0e912c4c2c928ba21702
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SliderText
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -561,7 +597,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 14f362c3ac93396409d4abc7813872ae
+      Hash: 3f2d8d2fdf678beaec1695bc12236d5e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GroupManager
@@ -601,6 +637,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Analytics.Editor.dll
     namespaceName: UnityEditor.Analytics
     className: AnalyticsEventTrackerEditor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Assets.SimpleAndroidNotifications
+    className: NotificationExample
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -687,7 +729,13 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: dd89585fc164f1d3b2feeb951c546d5a
+      Hash: a6c9915ea250512d62324c3155bc29fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NewSessionManager
+  - hash:
+      serializedVersion: 2
+      Hash: 95e1d601d4db990dae14c6f3f7c1e4d2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SessionManager
@@ -711,13 +759,19 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: b1b4503e1e74ceb722e50df721e15b1e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShiftColourButton
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: f32a64bf87edbfbcb900fd2833d033b2
+      Hash: 09dc634e95e9c0ff8102cc53b208bfa4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PageManager
@@ -763,13 +817,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Assets.SimpleAndroidNotifications
-    className: NotificationExample
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Unity Projects/BodyConnectPrototype/Builds/TestBuild.apk
+  playerPath: D:/Unity Projects/BodyConnectPrototype/Builds/BoddyConnect_alpha.apk

@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Assets.SimpleAndroidNotifications;
-using System;
 
 public class GroupManager : MonoBehaviour
 {
@@ -14,6 +12,7 @@ public class GroupManager : MonoBehaviour
     public Vector3 startPosition;
     public PageManager pageManager;
     public SessionManager sessionManager;
+    public Text informationalText;
     private int amountGroupButton;
 
     public void Start()
@@ -23,8 +22,14 @@ public class GroupManager : MonoBehaviour
             AddGroupButton(groupList[i].groupName, groupList[i].groupMemberAmount.ToString());
         }
 
-        NotificationManager.Send(TimeSpan.FromSeconds(5), "Simple notification", "Customize icon and color", new Color(1, 0.3f, 0.15f));
 
+        for (int i = 0; i < groupList.Count; i++)
+        {
+            for (int j = 0; j < groupList[i].sessions.Count; j++)
+            {
+                SetNewSessionNotification(i, j);
+            }
+        }
     }
 
     public void SetGroupInSessionManager(int groupIndex)
@@ -48,5 +53,12 @@ public class GroupManager : MonoBehaviour
         int groupNumber = amountGroupButton - 1;
 
         groupObject.GetComponent<GroupButton>().SetGroupNumber(this, groupNumber);
+
+        informationalText.gameObject.SetActive(false);
+    }
+
+    public void SetNewSessionNotification(int groupIndex, int sessionIndex)
+    {
+        groupList[groupIndex].sessions[sessionIndex].PlanNotification(groupList[groupIndex].groupName);
     }
 }

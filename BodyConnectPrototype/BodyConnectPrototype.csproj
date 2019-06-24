@@ -621,10 +621,16 @@
     <Compile Include="Assets\Scripts\GroupButton.cs" />
     <Compile Include="Assets\Scripts\GroupManager.cs" />
     <Compile Include="Assets\Scripts\NewGroupManager.cs" />
+    <Compile Include="Assets\Scripts\NewSessionManager.cs" />
     <Compile Include="Assets\Scripts\PageManager.cs" />
     <Compile Include="Assets\Scripts\Session.cs" />
     <Compile Include="Assets\Scripts\SessionManager.cs" />
+    <Compile Include="Assets\Scripts\SliderText.cs" />
     <Compile Include="Assets\Scripts\TopBar.cs" />
+    <Compile Include="Assets\SimpleAndroidNotifications\NotificationExample.cs" />
+    <Compile Include="Assets\SimpleAndroidNotifications\NotificationIcon.cs" />
+    <Compile Include="Assets\SimpleAndroidNotifications\NotificationManager.cs" />
+    <Compile Include="Assets\SimpleAndroidNotifications\NotificationParams.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
